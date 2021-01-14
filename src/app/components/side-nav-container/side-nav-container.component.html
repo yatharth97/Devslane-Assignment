@@ -1,15 +1,14 @@
-
+<app-toolbar (sideNavToggle) = "isExpanded = !isExpanded"></app-toolbar>
 <mat-sidenav-container autosize>
-  <mat-sidenav #navigationSidenav mode="over" role="navigation">
-    <mat-toolbar>
-      <mat-toolbar-row>
-        <h2 class="toolbar-title">Test App</h2>
-      </mat-toolbar-row>
-    </mat-toolbar>
+  <mat-sidenav #sidenav mode="side" [opened]="isExpanded">
+    <mat-nav-list>
+      <mat-list-item>
+        <span>Item 1</span>
+        <mat-icon mat-list-icon>home</mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
   </mat-sidenav>
-
-  <mat-sidenav-content role="main">
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-
+  <div>
+    <ng-content></ng-content>
+  </div>
 </mat-sidenav-container>

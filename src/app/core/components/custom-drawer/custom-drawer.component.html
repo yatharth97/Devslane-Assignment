@@ -1,9 +1,0 @@
-<mat-drawer-container [hasBackdrop]="hasBackDrop">
-    <mat-drawer #userDrawer [mode]="mode" [position]="position" (openedChange)="openStateChanged($event)">
-        <ng-content select="[sideNavContent]"></ng-content>
-    </mat-drawer>
-    <mat-drawer-content>
-        <custom-toolbar (sideDrawerIconClicked) = "userDrawer.toggle()" [titleName] = "title" [iconName]= "icon"></custom-toolbar>
-        <ng-content></ng-content>
-    </mat-drawer-content>
-</mat-drawer-container>
