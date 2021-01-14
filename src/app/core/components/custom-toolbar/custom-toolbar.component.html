@@ -1,0 +1,8 @@
+<mat-toolbar>
+    <span>{{titleName}}</span>
+    <span class="auto-spacer"></span>
+    <ng-content select="[otherButtons]"></ng-content>
+    <button mat-icon-button aria-label="icon button for sideDrawer" (click)="iconClicked()">
+        <mat-icon>{{iconName}}</mat-icon>
+    </button>
+</mat-toolbar>

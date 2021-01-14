@@ -1,0 +1,13 @@
+<mat-card class="product-card">
+  <mat-card-header>
+    <img mat-card-avatar class="profile-image" [src]="user.picture.thumbnail">
+    <mat-card-title>{{ user.name.first }} {{ user.name.last }}</mat-card-title>
+    <mat-card-subtitle>{{ user.dob.age }}yrs, {{ user.gender | titlecase }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider inset></mat-divider>
+  <mat-card-content class="profile-content">
+    <p><b>D.O.B.:</b> {{ user.dob.date | date: 'shortDate' }}</p>
+    <p><b>Phone:</b> {{ user.phone }}</p>
+    <p><b>Email:</b> {{ user.email }}</p>
+  </mat-card-content>
+</mat-card>
