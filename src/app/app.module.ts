@@ -8,13 +8,15 @@ import {CommonModule} from '@angular/common';
 import {SideNavContainerComponentComponent} from './components/side-nav-container/side-nav-container.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SideNavContainerComponentComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
